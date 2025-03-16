@@ -2,8 +2,7 @@
 
 Comment lancer le jeu :
 
-npm i (la première fois)
-npm run dev
+npm i (la première fois) puis npm run dev
 
 pour la version console : node console-game.js
 
