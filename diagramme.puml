@@ -1,0 +1,33 @@
+@startuml
+class Joueur {
+  +pseudo: String
+  +score: int
+  +faireTentative(code: String): void
+}
+
+class Game {
+  -secretCode: String
+  -attempts: int
+  -score: int
+  +generateSecretCode(): String
+  +checkGuess(guess: String): String
+  +endGame(): void
+}
+
+class ScoreManager {
+  +loadScores(): List
+  +saveScore(joueur: Joueur): void
+  +getLeaderboard(): List
+}
+
+class Server {
+  +GET /scores
+  +POST /save-score
+}
+
+Joueur --> Game : "fait une tentative"
+Game --> ScoreManager : "met à jour le score"
+ScoreManager --> Server : "sauvegarde en JSON"
+Server --> ScoreManager : "retourne les meilleurs scores"
+
+@enduml
