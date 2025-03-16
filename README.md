@@ -1,4 +1,4 @@
-# Mastermind
+# Mastermind Robin CHARRE
 
 Comment lancer le jeu :
 
