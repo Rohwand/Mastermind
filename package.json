@@ -1,0 +1,18 @@
+{
+  "name": "mastermind-game",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "console": "node console-game.js"
+  },
+  "devDependencies": {
+    "vite": "^5.4.2"
+  },
+  "dependencies": {
+    "play-sound": "^1.1.6"
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mastermind</title>
+  <script type="module" crossorigin src="/assets/index-DY0RAozP.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-nD_LAnSI.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mastermind</h1>
+            <nav>
+                <a href="rules.html">Règles</a>
+                <a href="index.html" class="active">Jeu</a>
+                <a href="scores.html">Scores</a>
+            </nav>
+        </header>
+
+        <div id="game">
+            <div id="score">Score: <span id="current-score">0</span></div>
+            <div id="attempts">Essais restants: <span id="attempts-left">20</span></div>
+            
+            <div class="game-container">
+                <div id="game-board"></div>
+                
+                <div class="game-controls">
+                    <div id="colors-picker">
+                        <div class="color" data-color="red"></div>
+                        <div class="color" data-color="blue"></div>
+                        <div class="color" data-color="green"></div>
+                        <div class="color" data-color="yellow"></div>
+                        <div class="color" data-color="purple"></div>
+                        <div class="color" data-color="orange"></div>
+                    </div>
+                    <button id="check-button">Vérifier</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-over" class="hidden">
+            <h2>Partie terminée!</h2>
+            <p>Votre score: <span id="final-score">0</span></p>
+            <div class="save-score">
+                <input type="text" id="player-name" placeholder="Entrez votre pseudo" />
+                <button id="save-score">Sauvegarder</button>
+            </div>
+            <button id="play-again">Rejouer</button>
+        </div>
+    </div>
+</body>
+</html>
