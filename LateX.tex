@@ -1,0 +1,53 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\title{Mastermind - Paradigmes de programmation}
+\author{Robin CHARRE}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Ce projet est une adaptation numérique du jeu \textbf{Mastermind}, où le joueur doit deviner une séquence de couleurs.  
+L’objectif est de proposer une expérience interactive en HTML, CSS et JavaScript, avec une gestion des scores via un backend Node.js.  
+
+\section{Règles du jeu}
+Le joueur doit deviner une combinaison secrète de couleurs.  
+\begin{itemize}
+    \item La combinaison est composée de 4 couleurs choisies aléatoirement parmi une palette.
+    \item Le joueur a \textbf{20 essais} pour trouver la bonne séquence.
+    \item À chaque tentative, le jeu indique :
+    \begin{itemize}
+        \item combien de couleurs sont bien placées (\textbf{bonne couleur, bonne position}).
+        \item combien de couleurs sont présentes mais mal placées (\textbf{bonne couleur, mauvaise position}).
+    \end{itemize}
+    \item Une fois la bonne combinaison trouvée, le joueur peut enregistrer son score.
+    \item Seul le meilleur score d’un joueur est sauvegardé.
+\end{itemize}
+
+\section{Développement du projet}
+Le projet a été développé en combinant plusieurs technologies modernes :
+
+\subsection{Interface utilisateur (HTML, CSS)}
+L’interface comprend :
+\begin{itemize}
+    \item Une grille pour sélectionner les couleurs.
+    \item Un bouton de validation des essais.
+    \item Un affichage des indices après chaque tentative.
+    \item Une zone d’enregistrement du pseudo en fin de partie.
+\end{itemize}
+
+Le style est géré via \textbf{CSS} pour offrir une expérience visuelle agréable.
+
+\subsection{Logique du jeu (JavaScript)}
+\begin{itemize}
+    \item Génération d’une combinaison de couleurs aléatoire.
+    \item Vérification des essais du joueur.
+    \item Affichage des indices sur la bonne combinaison.
+    \item Gestion du score.
+\end{itemize}
+\end{document}
